@@ -1,0 +1,136 @@
+/* Dark Robotic Theme */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: url('./assets/robotic-pattern.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: moveBackground 15s linear infinite; /* Add smooth motion effect */
+  color: #FFFFFF; /* Text color updated to white */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Ensure vertical alignment */
+}
+
+/* Header Styles */
+.robotic-header {
+  background: #FFFFFF; /* Header background changed to white */
+  color: #0D1117; /* Text color for contrast */
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Full width for the header */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+nav a {
+  color: #FFFFFF; /* White links */
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #FFFFFF;
+  text-shadow: 0 0 5px #FFFFFF; /* White glow effect on hover */
+}
+
+/* Section Styles */
+.robotic-section {
+  border: 2px solid #FFFFFF; /* White border */
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  box-shadow: 0 0 10px #FFFFFF; /* Soft white glow */
+  width: 80%; /* Centralize section with fixed width */
+  text-align: center;
+  margin-left: auto; /* Center-align horizontally */
+  margin-right: auto;
+}
+
+/* Footer Styles */
+.robotic-footer {
+  background: #161B22; /* Keeping footer background dark */
+  color: #FFFFFF; /* White footer text */
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%; /* Full width for the footer */
+}
+
+/* Social Media Icons */
+.social-links img {
+  width: 40px; /* Icon size */
+  margin: 0 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Hover effects */
+}
+
+.social-links img:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+  opacity: 0.8;
+}
+
+/* Title Rolling Animation */
+.animated-title {
+  display: inline-block; /* Ensure it's inline for the animation */
+  font-size: 3rem; /* Adjust size to match your design */
+  color: #0D1117; /* Dark gray color suitable for a white background */
+  animation: rollingTitle 5s linear infinite; /* Apply rolling animation */
+}
+
+@keyframes rollingTitle {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(90deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(90deg) rotateY(90deg);
+  }
+  75% {
+    transform: rotateX(0deg) rotateY(90deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+
+/* Moving Background Animation */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Uniform Image Styling for Certificates, Licenses, and Projects */
+.project-images img,
+.certificates img,
+.license-images img {
+  width: 220px; /* Set size to match project images */
+  height: auto;
+  margin: 20px;
+  border-radius: 10px; /* Smooth edges */
+  box-shadow: 0 0 15px #FFFFFF; /* White glow effect */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Hover effects */
+}
+
+/* Hover Animation for Projects */
+.project-images img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  opacity: 0.9; /* Fading effect on hover */
+}
+
+/* Hover Effects for Clickable Certificates */
+.certificates img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  opacity: 0.9;
+}
+
+/* License Images Styling (Non-Clickable) */
+.license-images img {
+  cursor: default; /* Prevent clickable behavior */
+  transition: none; /* No hover effects for licenses */
+}
